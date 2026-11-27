@@ -1,49 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>McLaren</title>
+  <meta name="theme-color" content="#111214">
+  <meta name="description" content="Conheça os pilotos e equipes do grid da Fórmula 1 2026.">
+  <title>Grid F1 — Temporada 2026</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 
-<body data-car="720s">
+<body>
   <div class="page">
-    <header>
-      <img src="img/logo.webp" alt="McLaren">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Grid F1, início">
+        <span class="brand-mark" aria-hidden="true">F1</span>
+        <span>GRID<span class="brand-light">.F1</span></span>
+      </a>
+      <span class="season-tag"><span class="live-dot"></span> TEMPORADA 2026</span>
     </header>
 
-    <main class="hero">
-      <section>
-        <h1>Um Grid de F1 personalizado.</h1>
-
-        <p class="lead">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laudantium amet explicabo autem, voluptatibus sed libero nihil odit modi, esse ipsam suscipit qui in ea consectetur itaque, cupiditate eum quis!
-        </p>
-
-        <div class="specs" aria-live="polite">
-          <div><b id="s-power"></b><small>Power</small></div>
-          <div><b id="s-accel"></b><small>0–100 km/h</small></div>
-          <div><b id="s-top"></b><small>Top speed</small></div>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A temporada começa aqui</p>
+          <h1 id="page-title">Vinte e dois pilotos.<br><span>Um só grid.</span></h1>
+          <p class="lead">
+            Conheça quem vai acelerar na Fórmula 1 em 2026. Escolha uma equipe e encontre seus pilotos no grid.
+          </p>
+          <a class="cta" href="#grid">Explorar o grid <span aria-hidden="true">↓</span></a>
         </div>
 
-        <button class="cta" id="video" type="button">Watch a video</button>
+        <div class="hero-stats" aria-label="Resumo da temporada">
+          <div class="stat"><strong>22</strong><span>PILOTOS</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>11</strong><span>EQUIPES</span></div>
+          <div class="season-number" aria-hidden="true">26</div>
+        </div>
       </section>
 
-      <section class="stage" id="stage">
-        <div class="disc"></div>
-        <div class="name" id="name" aria-hidden="true"></div>
-        <img class="car" id="car" alt="">
+      <section class="grid-section" id="grid" aria-labelledby="grid-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Pilotos e equipes</p>
+            <h2 id="grid-title">O grid <span>2026</span></h2>
+          </div>
+          <p class="grid-note"><span class="grid-note-icon" aria-hidden="true">↘</span> Selecione uma equipe para filtrar</p>
+        </div>
+
+        <div class="driver-grid" id="driver-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>Nenhum piloto encontrado para essa equipe.</p>
       </section>
     </main>
 
-    <nav class="picker" id="picker" aria-label="Choose a model"></nav>
+    <footer class="footer">
+      <a class="brand footer-brand" href="#" aria-label="Grid F1, início">
+        <span class="brand-mark" aria-hidden="true">F1</span>
+        <span>GRID<span class="brand-light">.F1</span></span>
+      </a>
+      <p>Feito para quem vive a velocidade.</p>
+      <span class="footer-season">FÓRMULA 1 · 2026</span>
+    </footer>
   </div>
 
-  <script src="scripts.js" defer></script>
+  <nav class="picker" id="picker" aria-label="Filtrar por equipe"></nav>
 </body>
 </html>
